@@ -1,0 +1,23 @@
+\documentclass[a4paper,11pt]{book}
+\usepackage{import}
+\usepackage{VinhNotes}
+
+\usepackage{makeidx}
+\makeindex
+
+\begin{document}
+	
+	\frontmatter
+	\import{./}{stats_title.tex}
+	
+	\clearpage
+	\thispagestyle{empty}
+	
+	\tableofcontents
+	
+	\mainmatter
+\chapter{Multivariate Probability Distributions}
+	\import{stats_notes_chapters/}{chapter_3}
+
+	
+\end{document}
