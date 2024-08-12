@@ -284,5 +284,30 @@ Three balanced coins are tossed independently. Let $Y_1 = \#\text{heads}$ and $Y
 \end{solution}
 
 \begin{exercise}{}{}
-	
+	Of nine executives in a business firm, 4 are married, 3 have never married and 2 are divorced. 3 of the executives are to be randomly selected for promotion. Let $Y_1$ be the number of married executives and $Y_2$ be the number of never-married executives among the 3 selected. Find the joint probability function of $Y_1$ and $Y_2$.
 \end{exercise}
+
+\begin{solution}
+	The sample space, the possible values of $Y_1$ and $Y_2$ and the associated probabilities are given by
+	\begin{center}
+		\begin{tabular}{|c|c| c| c| c| c| c| c| c|c|}
+			\hline
+			 outcome & 3m & 2m1n & 2m1d & 3n & 2n1m & 2n1d & 2d1m & 2d1n & 1m1n1d \\ \hline
+			 $(y_1, y_2)$ & $(3,0)$ & $(2,1)$ & $(2,0)$ & $(0,3)$ & $(1,2)$ & $(0,2)$ & $(1,0)$ & $(0,1)$ & $(1,1)$ \\ \hline
+			 probability & $\frac{{4\choose 3}}{{9\choose 3}}$ & $\frac{{4\choose 2}{3\choose 1}}{{9\choose 3}}$ & $\frac{{4\choose 2}{2\choose 1}}{{9\choose 3}}$ & $\frac{{3\choose 3}}{{9\choose 3}}$ & $\frac{{4\choose 1}{3\choose 2}}{{9\choose 3}}$ & $\frac{{3\choose 2}{2\choose 1}}{{9\choose 3}}$ & $\frac{{4\choose 1}}{{9\choose 3}}$ & $\frac{{3\choose 1}}{{9\choose 3}}$ &  $\frac{{4\choose 1}{3\choose 1}{2\choose 1}}{{9\choose 3}}$ \\ \hline
+		\end{tabular}
+	\end{center}
+	The joint probability function $p(y_1, y_2)$ is given by
+	\begin{center}
+		\begin{tabular}{c| c c c c }
+			& & $y_1$ & & \\ \cline{2-5}
+			$y_2$ & 0 & 1 & 2 & 3 \\ \hline
+			0 & 0 & 1/21 & 1/7 & 1/21\\
+			1 & 1/28 & 2/7 & 3/14 & 0\\
+			2 & 1/14 & 1/7 & 0 & 0\\
+			3 & 1/84 & 0 & 0 &  0\\
+		\end{tabular}
+	\end{center}
+	More concisely, one can write down the formula for $p(y_1,y_2)$ as
+	\[p(y_1, y_2) = \frac{{4\choose y_1}{3\choose y_2}{2\choose 3-y_1-y_2}}{{9\choose 3}}.\]
+\end{solution}
